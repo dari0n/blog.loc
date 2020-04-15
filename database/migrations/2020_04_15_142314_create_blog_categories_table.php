@@ -19,7 +19,7 @@ class CreateBlogCategoriesTable extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('description')->nullable();
-            $table->dateTime('published_at');
+            $table->dateTime('published_at')->nullable();
             $table->boolean('is_published')->default(false);
             $table->timestamps();
             $table->softDeletes();
